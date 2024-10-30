@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лінійні алгоритми - ПП-21 Гнатецький</title>
+</head>
+<body>
+<script>
+"use strict";
+
+let n = parseInt(prompt("Введіть кількість кутів n", ""));
+let r = parseFloat(prompt("Введіть радіус r", ""));
+
+if (n > 2 && r > 0) {
+    let a = 2 * r * Math.tan(Math.PI / n);
+    let p = a * n;
+    let s = (1 / 2) * n * a * r;
+
+    alert("Площа = " + s.toFixed(2));
+    alert("Периметр = " + p.toFixed(2));
+
+    let angle = (n - 2) * 180 / n;
+    alert("Кут між сторонами = " + angle.toFixed(2) + "°");
+} else {
+    alert("Неправильні дані. Переконайтесь, що n > 2 та r > 0.");
+}
+</script>
+</body>
+</html>
